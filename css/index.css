@@ -1,0 +1,288 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+/* font-family: 'Gamja Flower', cursive; */
+
+html { overflow:hidden; }
+body { font:bold 16px/1.6 Gamja Flower; color:#000; }
+
+
+/* .autoClock {
+    position:fixed; top:100px;
+    left:300px; z-index:9999;
+    font-size:30px; color:#000;
+    transition:all 0.5s;
+} */
+
+
+#menu { position:fixed; top:50%; transform:translateY(-50%); left:50px; z-index:99 }
+#menu li { margin:10px 0  }
+#menu li a {
+    display:block;
+    height:20px; width:20px;
+    border-radius:50%;
+    background-color:yellow;
+    position:relative 
+}
+#menu li.on a { background-color:black; transform:scale(1.2) }
+#menu li a span { 
+    position:absolute;
+    top:3px; left:30px; 
+    width:100px;
+    display:none;
+}    
+#menu li.on a span { display:block }
+
+
+
+
+section { 
+    width:100vw; 
+    height:100vh; 
+    position:relative;
+    /* border:1px solid #f00; */
+    overflow:hidden; 
+}
+
+.slideInner { position:relative }
+.slideInner .slide {
+    height:100vh; 
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:right center;
+    position:relative;
+}
+.slideInner .slide1 {
+    /* background-image:url(../img/bg1.jpg) */
+}
+/* .slideInner .slide2 {
+    background-image:url(../img/bg2.jpg)
+}
+.slideInner .slide3 {
+    background-image:url(../img/bg3.jpg)
+}
+.slideInner .slide4 {
+    background-image:url(../img/bg4.jpg)
+} */
+.slideInner .text { 
+    position:fixed;
+    transform:translateY(-50%);
+    top:200px; left:200px;
+    font-size:80px; width:600px;
+}
+
+/* .slideInner .text p:nth-child(1) { 
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+.slideInner .text p:nth-child(2) { 
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+.slideInner .slide.slick-active .text p:nth-child(1) {
+    animation:fadeInRight 0.5s both 0.6s;
+}
+.slideInner .slide.slick-active .text p:nth-child(2) {
+    animation:fadeInLeft 0.5s both 0.6s;
+} */
+
+.slideInner .slide1 .text p { 
+    background: linear-gradient(to right, #FF0, #000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
+/* .slideInner .slide2 .text p { 
+    background: linear-gradient(to left, #f00 40%, #00f 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.slideInner .slide3 .text p { 
+    background: linear-gradient(to right top, #f00 30%, #00f 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
+.slideInner .slide4 .text p { 
+    background: linear-gradient(to right, #f00 10%, #00f 15%, #0f0 35%, #f0f 50%, #0ff 60%, #ff5800 75%, #f05 87%, #ff7fd3 95%, #326d18 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+/* .slideInner .slick-dots {
+    position:absolute; 
+    bottom:50px; 
+    width:100%; 
+    text-align:center; 
+}
+.slideInner .slick-dots li { 
+    display:inline-block;
+    width:100px; height:3px; background-color:#fff;
+    margin:0 3px; 
+    position:relative; 
+} */
+/* .slideInner .slick-dots li:nth-child(2):before {  
+    content:'홍길동 홍길동 홍길동';
+    word-break:keep-all; line-height:1.2;
+    color:#fff;
+    font-size:16px;
+    position:absolute; bottom:3px; left:0;
+    width:100%; text-align:center; 
+} */
+
+/* .slideInner .slick-dots li button { 
+    border:none; 
+    width:0px; height:3px; background-color:#f00;
+    text-indent:-9999px; 
+    overflow:hidden; 
+    position:absolute; top:0; left:0; 
+    transition:all 0s;
+}
+.slideInner .slick-dots li.slick-active button { 
+    width:100px; 
+    transition:all 2s;
+} */
+.slideOuter { position:relative; }
+/* .slideOuter .plpa {
+    position:absolute; bottom:40px;
+    left:50%; border:none;
+    font-size:30px;
+    color:#fff; margin-left:230px; 
+} */
+
+
+/* 두번째 박스(스킬 그래프) */
+.skillContainer { height:100%; text-align:center; padding:8% 0 5%;}
+.skillContainer > div {
+    height:100%; 
+    width:100px; margin:0 30px; 
+    border:1px solid #000;
+    /* border-radius:10px; */
+    display:inline-block; 
+    position:relative;
+}
+
+.skillContainer > div:nth-child(1) { box-shadow:0px 0px 10px red;}
+.skillContainer > div:nth-child(2) { box-shadow:0px 0px 10px orange;}
+.skillContainer > div:nth-child(3) { box-shadow:0px 0px 10px yellow;}
+.skillContainer > div:nth-child(4) { box-shadow:0px 0px 10px green;}
+.skillContainer > div:nth-child(5) { box-shadow:0px 0px 10px blue;}
+.skillContainer > div > p {
+    position:absolute; top:100%; 
+    left:0; font-size:20px; width:100%; 
+    text-align:center;
+}
+.skillContainer > div > .score {
+    position:absolute;
+    bottom:0; width:100%;
+    transition:all 0.5s;
+}
+.skillContainer > div.html > .score { 
+    height:0%; transition-delay: 0s;
+    background-image:linear-gradient(to top, #fff, red);
+}
+.skillContainer > div.css > .score { 
+    height:0%; transition-delay: 0s;
+    background-image:linear-gradient(to top, #fff, orange);
+}
+.skillContainer > div.script > .score { 
+    height:0%; transition-delay: 0s;
+    background-image:linear-gradient(to top, #fff, yellow);
+}
+.skillContainer > div.jquery > .score { 
+    height:0%; transition-delay: 0s;
+    background-image:linear-gradient(to top, #fff, green);
+}
+.skillContainer > div.react > .score { 
+    height:0%; transition-delay: 0s;
+    background-image:linear-gradient(to top, #fff, blue);
+}
+.skillContainer> div.html.on > .score { 
+    height:70%; transition-delay: 0s;
+}
+.skillContainer> div.css.on > .score { 
+    height:60%;  transition-delay: 0.5s;
+}
+.skillContainer> div.script.on > .score { 
+    height:80%; transition-delay: 1s;
+}
+.skillContainer> div.jquery.on > .score { 
+    height:60%; transition-delay: 1.5s;
+}
+.skillContainer> div.react.on > .score { 
+    height:50%;  transition-delay: 2s;
+}
+
+
+
+/* 세번째 박스 */
+#sect3 { padding:50px 100px; }
+#sect3 .category { 
+    font-size:20px;
+    color:#000;
+    margin-bottom:20px;
+}
+#sect3 .category a { 
+    background-color:yellow;
+    padding:7px 20px;
+    display:inline-block;
+    border-radius:5px;
+    margin-right:10px;
+}
+#sect3 ul { overflow:hidden; }
+#sect3 ul li { 
+    float:left;
+    width:23.5%;
+    margin:10px 0;  
+    margin-right:2%; 
+    transform:scale(0.5);
+    opacity:0;
+    transition:all 0.5s;
+    transition-delay:0s;
+    border: 1px solid #000;
+}
+#sect3.on ul li {
+    transform:scale(1);
+    opacity:1;
+}
+#sect3.on ul li:nth-child(1) { transition-delay:0s }
+#sect3.on ul li:nth-child(2) { transition-delay:0.2s }
+#sect3.on ul li:nth-child(3) { transition-delay:0.4s }
+#sect3.on ul li:nth-child(4) { transition-delay:0.6s }
+#sect3.on ul li:nth-child(5) { transition-delay:0.8s }
+#sect3.on ul li:nth-child(6) { transition-delay:1.0s }
+#sect3.on ul li:nth-child(7) { transition-delay:1.2s }
+#sect3.on ul li:nth-child(8) { transition-delay:1.4s }
+
+#sect3 ul li:nth-child(4n) { margin-right:0 }
+
+
+
+/* 4번째 구역 */
+#sect4 { 
+    padding:200px 200px 100px 300px;
+    background-image:linear-gradient(-125deg, black, white, yellow);
+}
+#sect4 .formbox {
+    opacity:0;
+    transform:translate3d(0, 100%, 0);
+    transition:all 0.5s
+}
+#sect4.on .formbox {
+    opacity:1;
+    transform:translate3d(0, 0%, 0);
+}
+
+#sect4 col:nth-child(1) { width:20%; }
+#sect4 col:nth-child(2) { width:80%; }
+#sect4 td { padding:10px 5px; font-size:20px; color:#000; }
+#sect4 input[type=text] { width:200px; height:30px; border:1px solid #000; }
+#sect4 textarea { width:500px; height:150px; border:1px solid #000; }
+#sect4 .btn { text-align:center; margin:20px; }
+#sect4 button { 
+    border:none; border-radius:20px;
+    width:80px; height:50px;
+    font-size:20px;
+    color:#fff;
+}
+#sect4 button:hover { background-color: yellow;}
+#sect4 button[type=submit] { background-color:black; }
+#sect4 button[type=reset] { background-color:black; }
